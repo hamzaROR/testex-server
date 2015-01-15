@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>Itrustmynetwork</title>
+        <vendor>Itrustmynetwork</vendor>
+        <homepage href="Itrustmynetwork"/>
+        <description>Itrustmynetwork</description>
+        <description kind="short">Itrustmynetwork</description>
+        
+        
+    </information>
+    <update check="always"/>
+    <security>
+<all-permissions/>
+</security>
+    <resources>
+        <j2se java-vm-args="-Djava.security.policy=applet.policy" version="1.6+"/>
+        <jar href="Assistant.jar" main="true"/>
+        
+        
+    <jar href="lib/AbsoluteLayout.jar"/>
+<jar href="lib/appframework-1.0.3.jar"/>
+<jar href="lib/swing-worker-1.1.jar"/>
+</resources>
+    <application-desc main-class="">
+        
+    </application-desc>
+</jnlp>

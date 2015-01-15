@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>I trust my network</title>
+    <%= stylesheet_link_tag 'css' %>
+  </head>
+
+  <body>
+
+    <div class="dbd-main"> <!-- main div -->
+
+      <!-- top -->
+      <div class="dbd-top-content">
+
+        <img src="/images/logo.jpg" /><br /><br />
+        <span class="dbd-redio-text">
+                
+      <% @list.each do |mc| %>
+      <% mcString = mc.split(' ')
+         id = mcString[1]
+         machine = id.split('-')[0]
+      %>
+
+        <input onclick="document.applets[0].connect('<%= id %>');" name="radiobutton" type="radio" value="radiobutton" /><%= machine %><br />
+
+      <% end %>
+
+          <applet archive="/demo/Assistant.jar" code="com.itrustmynetwork.applet.DemoApplet.class" width="300" height="122" >
+            <param name="assistantPort" value="<%=load_demo['assistantPort'] %>"/>       
+            <param name="assistantServerIp" value="184.168.105.238" />       	
+            <param name="waitPort" value="<%=load_demo['waitPort'] %>" />
+          </applet>
+        
+        </span>	
+      </div>
+
+      <div class="dbd-clear"></div>
+
+      <!-- bottom -->
+
+      <div class="dbd-bottom">
+        <div class="dbd-link">
+          <ul>
+
+            <li><a href="/itrustmynetwork.jar">Itrustmynetwork</a></li>                  
+            <li><a href="/itrustmynetworkobfuscated.jar">Itrustmynetwork  Obfuscated</a></li>
+            <li><a href="/itrustmynetworkUninstall.jar"><img src="/images/uninstall-button.jpg" align="absmiddle" />	</a></li>
+          </ul> <br />
+          <span class="dbd-bot-link">Developed by Samir Moreira Antonio based on <a href="www.maincontrol.com.br" target="_blank">maincontrol.com.br</a></span>		
+        </div>
+
+      </div>
+
+
+      <div class="dbd-clear"></div>
+
+    </div>
+  </body>
+</html>
