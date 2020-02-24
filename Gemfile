@@ -1,14 +1,19 @@
 source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use jdbcsqlite3 as the database for Active Record
-gem 'activerecord-jdbcsqlite3-adapter'
+# gem 'activerecord-jdbcsqlite3-adapter'
+
+gem 'activerecord-jdbcsqlite3-adapter', platform: :jruby
+gem 'sqlite3', '~> 1.4'
 
 
 
-gem 'jruby-openssl' 
+#gem 'jruby-openssl' 
 
 
 
@@ -17,7 +22,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+# gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyrhino'
 # Use jquery as the JavaScript library

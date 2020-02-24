@@ -1,9 +1,9 @@
 class DemoController < ApplicationController
-
+  # http_basic_authenticate_with name: "1", password: "Nidhi@2013"
   def status
 
     host = 'localhost'
-    port = 2291
+    port = 3000
 
     s = TCPSocket.open(host, port)
 
